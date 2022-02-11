@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} !^/stamp_rally/
+    RewriteRule ^(.*)$ /stamp_rally/$1 [L,R=301]
+</IfModule>
+
+
+
